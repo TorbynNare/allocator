@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Calculate from "@/components/calculate";
+import Yerrp from "@/components/yerrp";
 
 const STORAGE_KEY = "portfolio-balancer-state";
 
@@ -199,6 +201,8 @@ const PortfolioBalancer = () => {
           )}
         </div>
       </div>
+      <Calculate />
+      <Yerrp />
     </div>
   );
 };
