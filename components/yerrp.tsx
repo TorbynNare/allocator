@@ -8,7 +8,6 @@ const PortfolioBalancerWithMultiplier = () => {
     { id: 1, name: "", percentage: 0, multiplier: 1 },
   ]);
   const [nextId, setNextId] = useState(2);
-  const [saveStatus, setSaveStatus] = useState("");
 
   const getRemainingPercentage = () => {
     const total = coins.reduce((sum, coin) => sum + (coin.percentage || 0), 0);

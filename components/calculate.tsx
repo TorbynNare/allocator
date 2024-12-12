@@ -35,14 +35,14 @@ const PercentageToMultiplier = () => {
   };
 
   // Handle percentage input changes
-  const handlePercentageChange = (e: any) => {
+  const handlePercentageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
     setPercentage(inputValue);
     setMultiplier(calculateMultiplier(inputValue));
   };
 
   // Handle multiplier input changes
-  const handleMultiplierChange = (e: any) => {
+  const handleMultiplierChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
     setMultiplier(inputValue);
     setPercentage(calculatePercentage(inputValue));
@@ -51,7 +51,6 @@ const PercentageToMultiplier = () => {
   // Update summary based on inputs
   useEffect(() => {
     if (multiplier && percentage) {
-      const percentNum = parseInt(percentage);
       const multNum = parseInt(multiplier);
 
       let summaryText = "";
